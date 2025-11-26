@@ -219,7 +219,7 @@ export const Navbar: React.FC<NavbarProps> = ({ cartItems, onOpenCart }) => {
               />
 
               {totalItems > 0 && (
-                <span className="absolute -top-1 -right-1 bg-black text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full min-w-[18px] text-center">
+                <span className="absolute -top-1 -right-1 bg-black text-black text-[10px] font-bold px-1.5 py-0.5 rounded-full min-w-[18px] text-center">
                   {totalItems}
                 </span>
               )}
