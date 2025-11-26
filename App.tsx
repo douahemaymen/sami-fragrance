@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { CartSidebar } from './components/CartSidebar';
-import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
 import { ProductDetail } from './components/ProductDetail';
 import { database } from './firebase.config';
@@ -98,8 +97,6 @@ function App() {
             />
           </Routes>
         </main>
-
-        <Footer />
       </div>
     </Router>
   );
