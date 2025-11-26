@@ -44,7 +44,7 @@ export const Home: React.FC<HomeProps> = ({ products, onAddToCart }) => {
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
           <div className="w-full md:w-1/2">
             <img
-              src="/assets/SamiFragrance.jpg"
+                      src="/SamiFragrance.jpg"
               alt="About Sami Fragrance"
               className="w-full h-[500px] object-cover shadow-xl"
             />
@@ -77,3 +77,4 @@ export const Home: React.FC<HomeProps> = ({ products, onAddToCart }) => {
     </>
   );
 };
+
