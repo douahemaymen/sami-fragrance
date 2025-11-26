@@ -26,25 +26,25 @@ export const ContactSection: React.FC = () => {
 
   return (
     <section id="contact" className="bg-gray-900 text-white">
-      <div className="flex flex-col md:flex-row h-auto md:h-[600px]">
+      <div className="flex flex-col-reverse md:flex-row h-auto md:h-[600px]">
 
-        {/* Contact Info (Left Side) */}
-        <div className="w-full md:w-1/2 p-10 md:p-20 flex flex-col justify-center bg-gray-800">
-          <h2 className="font-serif text-4xl mb-2 text-white">Visitez-nous</h2>
-          <p className="text-gray-300 mb-10 uppercase tracking-widest text-sm">Sami Fragrance Boutique</p>
+        {/* Contact Info (Left Side on desktop, Bottom on mobile) */}
+        <div className="w-full md:w-1/2 p-8 md:p-20 flex flex-col justify-center bg-gray-800">
+          <h2 className="font-serif text-3xl md:text-4xl mb-2 text-white">Visitez-nous</h2>
+          <p className="text-gray-300 mb-8 md:mb-10 uppercase tracking-widest text-xs md:text-sm">Sami Fragrance Boutique</p>
 
-          <div className="space-y-8">
+          <div className="space-y-6 md:space-y-8">
             <div className="flex items-start space-x-4">
-              <MapPin className="text-white mt-1 shrink-0" />
+              <MapPin className="text-white mt-1 shrink-0" size={20} />
               <div>
-                <h3 className="font-bold mb-1 text-white">Adresse</h3>
-                <p className="text-gray-200">Tunis, Tunisie</p>
+                <h3 className="font-bold mb-1 text-white text-sm md:text-base">Adresse</h3>
+                <p className="text-gray-200 text-sm md:text-base">Tunis, Tunisie</p>
                 <p className="text-xs text-gray-400 mt-1">({STORE_LOCATION.lat}, {STORE_LOCATION.lng})</p>
                 <a
                   href={`https://www.google.com/maps/search/?api=1&query=${STORE_LOCATION.lat},${STORE_LOCATION.lng}`}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-gold-400 text-sm mt-2 flex items-center hover:underline hover:text-gold-300"
+                  className="text-gold-400 text-xs md:text-sm mt-2 flex items-center hover:underline hover:text-gold-300"
                 >
                   Ouvrir dans Google Maps <ExternalLink size={12} className="ml-1" />
                 </a>
@@ -52,25 +52,25 @@ export const ContactSection: React.FC = () => {
             </div>
 
             <div className="flex items-start space-x-4">
-              <Phone className="text-white mt-1 shrink-0" />
+              <Phone className="text-white mt-1 shrink-0" size={20} />
               <div>
-                <h3 className="font-bold mb-1 text-white">Téléphone</h3>
-                <a href={`tel:${SOCIAL_LINKS.phone}`} className="text-gray-200 hover:text-white transition-colors">
+                <h3 className="font-bold mb-1 text-white text-sm md:text-base">Téléphone</h3>
+                <a href={`tel:${SOCIAL_LINKS.phone}`} className="text-gray-200 hover:text-white transition-colors text-sm md:text-base">
                   {SOCIAL_LINKS.phone}
                 </a>
               </div>
             </div>
 
-            <div className="pt-8 border-t border-gray-600">
-              <h3 className="font-bold mb-4 text-white">Suivez-nous</h3>
-              <div className="flex space-x-6">
-                <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noreferrer" className="bg-gray-800 p-3 rounded-full hover:bg-gradient-to-tr hover:from-yellow-400 hover:via-red-500 hover:to-purple-500 transition-all duration-300 group">
-                  <Instagram className="group-hover:text-white text-gray-300" />
+            <div className="pt-6 md:pt-8 border-t border-gray-600">
+              <h3 className="font-bold mb-4 text-white text-sm md:text-base">Suivez-nous</h3>
+              <div className="flex space-x-4 md:space-x-6">
+                <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noreferrer" className="bg-gray-800 p-2.5 md:p-3 rounded-full hover:bg-gradient-to-tr hover:from-yellow-400 hover:via-red-500 hover:to-purple-500 transition-all duration-300 group">
+                  <Instagram className="group-hover:text-white text-gray-300" size={20} />
                 </a>
-                <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noreferrer" className="bg-gray-800 p-3 rounded-full hover:bg-blue-600 transition-colors duration-300 group">
-                  <Facebook className="group-hover:text-white text-gray-300" />
+                <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noreferrer" className="bg-gray-800 p-2.5 md:p-3 rounded-full hover:bg-blue-600 transition-colors duration-300 group">
+                  <Facebook className="group-hover:text-white text-gray-300" size={20} />
                 </a>
-                <a href={SOCIAL_LINKS.tiktok} target="_blank" rel="noreferrer" className="bg-gray-800 p-3 rounded-full hover:bg-black hover:border hover:border-white transition-colors duration-300 group border border-transparent">
+                <a href={SOCIAL_LINKS.tiktok} target="_blank" rel="noreferrer" className="bg-gray-800 p-2.5 md:p-3 rounded-full hover:bg-black hover:border hover:border-white transition-colors duration-300 group border border-transparent">
                   <TikTokIcon className="group-hover:text-white text-gray-300" />
                 </a>
               </div>
@@ -78,8 +78,8 @@ export const ContactSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Map (Right Side) */}
-        <div className="w-full md:w-1/2 h-[400px] md:h-full relative bg-gray-900">
+        {/* Map (Right Side on desktop, Top on mobile) */}
+        <div className="w-full md:w-1/2 h-[350px] md:h-full relative bg-gray-900">
           <iframe
             width="100%"
             height="100%"
@@ -90,7 +90,7 @@ export const ContactSection: React.FC = () => {
             marginWidth={0}
             title="Sami Fragrance Location"
             className="transition-all duration-700"
-            style={{ minHeight: '400px' }}
+            style={{ minHeight: '350px' }}
           ></iframe>
 
           {/* Custom Marker overlay hint if needed, though iframe handles the map content */}
