@@ -89,7 +89,7 @@ export const ContactSection: React.FC = () => {
             marginHeight={0}
             marginWidth={0}
             title="Sami Fragrance Location"
-            className="filter grayscale hover:grayscale-0 transition-all duration-700"
+            className="transition-all duration-700"
             style={{ minHeight: '400px' }}
           ></iframe>
 
